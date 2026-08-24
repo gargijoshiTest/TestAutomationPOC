@@ -1,3 +1,29 @@
+:root{
+  --bg:#ffffff; --fg:#111827; --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--fg);background:var(--bg);margin:0}
+.container{max-width:960px;margin:24px auto;padding:16px}
+h1{font-size:1.25rem;margin:0 0 12px}
+.controls{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;width:100%;justify-content:flex-start}
+input[type=search]{flex:1;padding:10px 12px;border:1px solid #e5e7eb;border-radius:6px;font-size:1rem}
+select{padding:9px;border:1px solid #e5e7eb;border-radius:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px}
+.grid.horizontal{display:flex;flex-direction:row;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:12px 0;width:100%}
+.card{border-radius:8px;overflow:hidden;border:1px solid #e5e7eb;cursor:pointer;display:flex;flex-direction:column;flex:0 0 140px}
+.swatch{height:80px;width:100%}
+.card-body{padding:8px;display:flex;justify-content:space-between;align-items:center}
+.card .name{font-size:0.9rem}
+.hex{font-family:monospace;font-size:0.85rem;color:var(--muted)}
+.copy-btn{border:0;background:#111827;color:#fff;padding:6px 8px;border-radius:6px;font-size:0.8rem;cursor:pointer}
+.copy-btn:focus{outline:2px solid #2563eb}
+.empty{padding:24px;text-align:center;color:var(--muted)}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);visibility:hidden;opacity:0;transition:opacity .15s}
+.modal[aria-hidden="false"]{visibility:visible;opacity:1}
+.modal-content{background:#fff;border-radius:8px;padding:16px;max-width:420px;width:100%;position:relative}
+.close{position:absolute;right:8px;top:8px;border:0;background:transparent;font-size:1.1rem;cursor:pointer}
+@media (max-width:420px){.swatch{height:64px}.card-body{padding:6px}}
 * {
   box-sizing: border-box;
   margin: 0;
