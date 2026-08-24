@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "npx http-server src/static -p 8000",
+    "build": "echo \"no build step for static prototype\"",
     "test": "node ci/test-filter.js"
   }
 }

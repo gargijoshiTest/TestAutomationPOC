@@ -70,7 +70,10 @@
       return c.name.toLowerCase().includes(q) || c.hex.toLowerCase().includes(q) || (c.rgb && c.rgb.toLowerCase().includes(q));
     });
     activeIndex = filtered.length ? 0 : -1;
-    render();
+    // reset chunked rendering state and render initial chunk
+    renderedCount = Math.min(CHUNK_SIZE, filtered.length);
+    if(window._observer){ window._observer.disconnect(); window._observer = null; }
+    renderInitialChunks();
   }
 
   const debouncedFilter = debounce(applyFilters, 100);

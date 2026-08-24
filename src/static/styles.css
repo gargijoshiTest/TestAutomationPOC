@@ -5,11 +5,12 @@
 body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--fg);background:var(--bg);margin:0}
 .container{max-width:960px;margin:24px auto;padding:16px}
 h1{font-size:1.25rem;margin:0 0 12px}
-.controls{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+.controls{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;width:100%;justify-content:flex-start}
 input[type=search]{flex:1;padding:10px 12px;border:1px solid #e5e7eb;border-radius:6px;font-size:1rem}
 select{padding:9px;border:1px solid #e5e7eb;border-radius:6px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px}
-.card{border-radius:8px;overflow:hidden;border:1px solid #e5e7eb;cursor:pointer;display:flex;flex-direction:column}
+.grid.horizontal{display:flex;flex-direction:row;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:12px 0;width:100%}
+.card{border-radius:8px;overflow:hidden;border:1px solid #e5e7eb;cursor:pointer;display:flex;flex-direction:column;flex:0 0 140px}
 .swatch{height:80px;width:100%}
 .card-body{padding:8px;display:flex;justify-content:space-between;align-items:center}
 .card .name{font-size:0.9rem}
