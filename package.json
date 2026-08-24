@@ -1,0 +1,9 @@
+{
+  "name": "color-palette-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "npx http-server src/static -p 8000",
+    "test": "node ci/test-filter.js"
+  }
+}
